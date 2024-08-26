@@ -1,0 +1,72 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #2c3e50; /* Dark background for a gaming feel */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100vh; /* Full viewport height */
+}
+
+.game {
+  max-width: calc(3 * 100px);
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(145deg, #1e2a38, #2b3a4b); /* Gradient background for the game container */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Deeper shadow for a more pronounced effect */
+}
+
+.status {
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  color: #ecf0f1; /* Light text color for better contrast */
+  font-weight: bold; /* Bold font for emphasis */
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px; /* Spacing between cells */
+  justify-content: center;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  font-size: 36px;
+  border: 2px solid #3498db; /* Bright blue border for cells */
+  background: #34495e; /* Dark background for cells */
+  color: #ecf0f1; /* Light text color for visibility */
+  border-radius: 8px; /* Rounded corners for cells */
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cell:hover {
+  background-color: #4a5d77; /* Slightly lighter background on hover */
+  transform: scale(1.05); /* Slight zoom effect on hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Shadow effect on hover */
+}
+
+.reset-button {
+  padding: 10px 20px; /* Increased padding for a more prominent button */
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  background: linear-gradient(145deg, #1abc9c, #16a085); /* Gradient background for the button */
+  color: #fff; /* White text color for contrast */
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.reset-button:hover {
+  background: linear-gradient(145deg, #1eab8b, #148c75); /* Slightly different gradient on hover */
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
